@@ -1,29 +1,24 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - this program prints its name
- *
- * @argc: number of arguments
- * @argv: array of arguments
- *
- * Return: 0
+ * main - this is a function to print its name
+ * @argc: argc parameter
+ * @argv: an array of a command listed
+ * Return: 0 for success
  */
 int main(int argc, char *argv[])
 {
-	int a = 0;
-	int b = 0;
-	int result = 0;
+	int result, num1, num2;
 
 	if (argc != 3)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		return (1);
 	}
-	a = _atoi(argv[1]);
-	b = _atoi(argv[2]);
-	result = a * b;
-
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	result = num1 * num2;
 	printf("%d\n", result);
 	return (0);
 }
